@@ -279,6 +279,9 @@
           ];
           function next(){
             var s=srcs.shift();
+            /* fallback stills show Glenn alone, so drop Dan Senor from the caption */
+            var cap=document.querySelector('.hero-photo .cap');
+            if(cap){cap.textContent='Glenn Cohen on the AIPAC main stage';}
             if(s){img.src=s;}
             else{var f=img.parentElement;if(f){f.remove();}}
           }
