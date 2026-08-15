@@ -264,13 +264,14 @@
     <p class="tagline">&ldquo;We are far stronger than we think, and even the darkest trauma can become growth, not just survival.&rdquo;</p>
     <figure class="hero-photo" style="margin-left:0;margin-right:0">
       <img id="heroimg"
-           src="Glenn%20and%20Dan.png"
+           src="https://static.wixstatic.com/media/874d13_6fad6ba9c4c34e3cb044be762b00f872~mv2.png"
            alt="Glenn Cohen in conversation with Dan Senor on the AIPAC main stage">
       <script>
         (function(){
           var img=document.getElementById('heroimg');
           /* fallbacks if the primary photo can't load: AIPAC video stills, largest first */
           var srcs=[
+            'Glenn%20and%20Dan.png',
             'https://i.ytimg.com/vi/vFgGWZvrRWY/maxresdefault.jpg',
             'https://i.ytimg.com/vi/D5tRvjBVIbg/sddefault.jpg',
             'https://i.ytimg.com/vi/D5tRvjBVIbg/hqdefault.jpg',
@@ -279,9 +280,11 @@
           ];
           function next(){
             var s=srcs.shift();
-            /* fallback stills show Glenn alone, so drop Dan Senor from the caption */
-            var cap=document.querySelector('.hero-photo .cap');
-            if(cap){cap.textContent='Glenn Cohen on the AIPAC main stage';}
+            /* YouTube fallback stills show Glenn alone, so drop Dan Senor from the caption */
+            if(s&&s.indexOf('ytimg')>-1){
+              var cap=document.querySelector('.hero-photo .cap');
+              if(cap){cap.textContent='Glenn Cohen on the AIPAC main stage';}
+            }
             if(s){img.src=s;}
             else{var f=img.parentElement;if(f){f.remove();}}
           }
