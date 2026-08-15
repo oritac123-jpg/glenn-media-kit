@@ -348,10 +348,19 @@
   <!-- APPEARANCES -->
   <section>
     <h2 class="label">Podcasts &amp; Interviews</h2>
+    <script>
+      /* try alternate YouTube thumbnail sizes; grey placeholders load fine but are tiny */
+      function thumbNext(img){
+        var alts=(img.getAttribute('data-alts')||'').split(',').filter(Boolean);
+        var s=alts.shift();
+        if(s){img.setAttribute('data-alts',alts.join(','));img.src=s;}
+        else{img.remove();}
+      }
+    </script>
     <ul class="cards">
 
       <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:22px;letter-spacing:.14em">UVDA</span><img src="https://i.ytimg.com/vi/UHGbHDLdW7M/hqdefault.jpg" alt="Glenn Cohen in conversation with a captivity survivor on Uvda" onerror="this.remove()"></div>
+        <div class="thumb"><span class="mono" style="font-size:22px;letter-spacing:.14em">UVDA</span><img src="https://i.ytimg.com/vi/UHGbHDLdW7M/maxresdefault.jpg" alt="Glenn Cohen in conversation with a captivity survivor on Uvda" data-alts="https://i.ytimg.com/vi/UHGbHDLdW7M/sddefault.jpg,https://i.ytimg.com/vi/UHGbHDLdW7M/hqdefault.jpg,https://i.ytimg.com/vi/UHGbHDLdW7M/0.jpg" onerror="thumbNext(this)" onload="if(this.naturalWidth&lt;200)thumbNext(this)"></div>
         <div class="card-body">
           <span class="brand">Uvda</span>
           <h3>Glenn Cohen in conversation with a captivity survivor on &ldquo;Uvda&rdquo;</h3>
