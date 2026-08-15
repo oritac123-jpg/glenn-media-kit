@@ -354,25 +354,7 @@
   <!-- APPEARANCES -->
   <section>
     <h2 class="label">Podcasts &amp; Interviews</h2>
-    <script>
-      /* try alternate YouTube thumbnail sizes; grey placeholders load fine but are tiny */
-      function thumbNext(img){
-        var alts=(img.getAttribute('data-alts')||'').split(',').filter(Boolean);
-        var s=alts.shift();
-        if(s){img.setAttribute('data-alts',alts.join(','));img.src=s;}
-        else{img.remove();}
-      }
-    </script>
     <ul class="cards">
-
-      <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:22px;letter-spacing:.14em">UVDA</span><img src="https://i.ytimg.com/vi/UHGbHDLdW7M/maxresdefault.jpg" alt="Glenn Cohen in conversation with a captivity survivor on Uvda" data-alts="https://i.ytimg.com/vi/UHGbHDLdW7M/sddefault.jpg,https://i.ytimg.com/vi/UHGbHDLdW7M/hqdefault.jpg,https://i.ytimg.com/vi/UHGbHDLdW7M/0.jpg" onerror="thumbNext(this)" onload="if(this.naturalWidth&lt;200)thumbNext(this)"></div>
-        <div class="card-body">
-          <span class="brand">Uvda</span>
-          <h3>Glenn Cohen in conversation with a captivity survivor on &ldquo;Uvda&rdquo;</h3>
-          <a class="listen" href="https://www.youtube.com/watch?v=UHGbHDLdW7M">Watch</a>
-        </div>
-      </li>
 
       <li class="card">
         <div class="thumb"><span class="mono" style="font-size:19px;letter-spacing:.14em">ERIN&nbsp;MOLAN</span><img src="https://i.ytimg.com/vi/6oHcBb36Wk4/hqdefault.jpg" alt="Glenn Cohen on Erin Molan's podcast" onerror="this.remove()"></div>
@@ -411,15 +393,6 @@
       </li>
 
       <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:19px;letter-spacing:.14em">JM&nbsp;IN&nbsp;THE&nbsp;AM</span><img src="https://i.ytimg.com/vi/_jgPzHcuN0E/hqdefault.jpg" alt="Glenn Cohen live in studio on JM in the AM" onerror="this.remove()"></div>
-        <div class="card-body">
-          <span class="brand">JM in the AM</span>
-          <h3>Hostage debriefer Glenn Cohen live in studio</h3>
-          <a class="listen" href="https://www.youtube.com/watch?v=_jgPzHcuN0E">Watch</a>
-        </div>
-      </li>
-
-      <li class="card">
         <div class="thumb"><span class="mono" style="font-size:17px;letter-spacing:.14em">MEANINGFUL&nbsp;PEOPLE</span><img src="https://i.ytimg.com/vi/rwrY_7tGUIw/hqdefault.jpg" alt="Meaningful People, Glenn Cohen" onerror="this.remove()"></div>
         <div class="card-body">
           <span class="brand">Meaningful People Podcast</span>
@@ -429,11 +402,29 @@
       </li>
 
       <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:19px;letter-spacing:.14em">JM&nbsp;IN&nbsp;THE&nbsp;AM</span><img src="https://i.ytimg.com/vi/_jgPzHcuN0E/hqdefault.jpg" alt="Glenn Cohen live in studio on JM in the AM" onerror="this.remove()"></div>
+        <div class="card-body">
+          <span class="brand">JM in the AM</span>
+          <h3>Hostage debriefer Glenn Cohen live in studio</h3>
+          <a class="listen" href="https://www.youtube.com/watch?v=_jgPzHcuN0E">Watch</a>
+        </div>
+      </li>
+
+      <li class="card">
         <div class="thumb"><span class="mono" style="font-size:19px;letter-spacing:.14em">J100</span><img src="https://i.ytimg.com/vi/TJPPMIoG_lg/hqdefault.jpg" alt="Glenn Cohen honored at the Algemeiner J100" onerror="this.remove()"></div>
         <div class="card-body">
           <span class="brand">Algemeiner</span>
           <h3>Algemeiner J100 list of the most impactful people</h3>
           <a class="listen" href="https://www.youtube.com/watch?v=TJPPMIoG_lg">Watch</a>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:22px;letter-spacing:.14em">UVDA</span><img src="https://static.wixstatic.com/media/874d13_d19bbd6b32af4e63bd21b7c8d38609b9~mv2.png" alt="Glenn Cohen in conversation with a captivity survivor on Uvda" onerror="this.remove()"></div>
+        <div class="card-body">
+          <span class="brand">Uvda</span>
+          <h3>Glenn Cohen in conversation with a captivity survivor on &ldquo;Uvda&rdquo;</h3>
+          <a class="listen" href="https://www.youtube.com/watch?v=UHGbHDLdW7M">Watch</a>
         </div>
       </li>
 
