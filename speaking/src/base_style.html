@@ -1,0 +1,252 @@
+<title>Glenn Cohen | Media Kit</title>
+<base target="_blank">
+<style>
+  :root{
+    --ink:#12202F;
+    --ink-2:#1B2E42;
+    --paper:#F4F4F1;
+    --card:#FFFFFF;
+    --text:#26313D;
+    --muted:#5C6875;
+    --brass:#A9853F;
+    --brass-soft:#CBB27E;
+    --steel:#41678C;
+    --line:#DDDDD6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#0B141F;
+      --ink-2:#152435;
+      --paper:#101A26;
+      --card:#182636;
+      --text:#DDE3E9;
+      --muted:#93A0AD;
+      --brass:#C9A55A;
+      --brass-soft:#8A7442;
+      --steel:#7FA3C7;
+      --line:#27384B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#0B141F;
+    --ink-2:#152435;
+    --paper:#101A26;
+    --card:#182636;
+    --text:#DDE3E9;
+    --muted:#93A0AD;
+    --brass:#C9A55A;
+    --brass-soft:#8A7442;
+    --steel:#7FA3C7;
+    --line:#27384B;
+  }
+  :root[data-theme="light"]{
+    --ink:#12202F;
+    --ink-2:#1B2E42;
+    --paper:#F4F4F1;
+    --card:#FFFFFF;
+    --text:#26313D;
+    --muted:#5C6875;
+    --brass:#A9853F;
+    --brass-soft:#CBB27E;
+    --steel:#41678C;
+    --line:#DDDDD6;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
+
+  .page{max-width:860px;margin:0 auto;padding:0 0 64px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);
+    color:#EDEAE2;
+    padding:56px 48px 48px;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--brass-soft);font-weight:600;margin:0 0 18px;
+  }
+  .hero h1{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    font-size:clamp(38px,6vw,56px);
+    line-height:1.05;margin:0 0 14px;font-weight:600;color:#F5F2EA;
+    text-wrap:balance;
+  }
+  .roles{
+    font-size:15px;color:#B9C2CC;max-width:56ch;margin:0 0 26px;
+  }
+  .roles b{color:#E4E0D5;font-weight:600}
+  .tagline{
+    border-left:3px solid var(--brass);
+    padding:6px 0 6px 20px;
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:clamp(19px,2.6vw,24px);line-height:1.4;color:#F0EBDF;
+    max-width:34ch;text-wrap:balance;
+  }
+  .hero-photo{margin:32px 0 0}
+  .hero-photo img{
+    display:block;width:100%;
+    aspect-ratio:2.2/1;object-fit:cover;object-position:center 32%;
+  }
+  .hero-photo .cap{
+    display:block;margin-top:10px;font-size:12.5px;color:#8E99A5;
+    letter-spacing:.04em;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:44px 48px 0}
+  .label{
+    font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+    color:var(--brass);margin:0 0 16px;
+  }
+  .prose{font-size:16.5px;max-width:68ch;margin:0}
+  .prose + .prose{margin-top:14px}
+
+  /* first-person block */
+  .firstperson{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:26px 30px;
+    max-width:70ch;
+  }
+  .firstperson p{margin:0;font-size:16.5px}
+  .firstperson p + p{margin-top:12px}
+  .signature{
+    margin-top:16px;font-family:"Iowan Old Style",Palatino,Georgia,serif;
+    font-style:italic;font-size:17px;color:var(--muted);
+  }
+
+  /* Oren pull quote */
+  .pullquote{
+    margin:0;padding:0;
+    max-width:60ch;
+  }
+  .pullquote blockquote{
+    margin:0;
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:clamp(20px,3vw,26px);line-height:1.45;
+    color:var(--text);text-wrap:balance;
+  }
+  .pullquote blockquote::before{content:"\201C";color:var(--brass);margin-right:2px}
+  .pullquote blockquote::after{content:"\201D";color:var(--brass)}
+  .attrib{margin:14px 0 0;font-size:14px;color:var(--muted)}
+  .attrib b{color:var(--text);font-weight:600;font-size:15px}
+
+  /* listener quotes */
+  .quotewall{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;margin:0;padding:0;list-style:none;
+  }
+  .quotewall li{
+    background:var(--card);border:1px solid var(--line);
+    padding:18px 20px;
+    font-family:"Iowan Old Style",Palatino,Georgia,serif;
+    font-size:16px;line-height:1.5;
+  }
+  .quotewall li::before{content:"\201C";color:var(--brass);font-size:22px;line-height:0;vertical-align:-4px;margin-right:2px}
+  .watch{
+    display:inline-block;margin-top:18px;font-size:14.5px;font-weight:600;
+    color:var(--steel);text-decoration:none;border-bottom:1px solid var(--steel);
+    padding-bottom:1px;
+  }
+  .watch:hover{color:var(--brass);border-color:var(--brass)}
+
+  /* ---------- APPEARANCES ---------- */
+  .cards{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:18px;margin:0;padding:0;list-style:none;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .thumb{
+    aspect-ratio:16/9;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,var(--ink) 0%,var(--ink-2) 70%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mono{
+    font-family:"Iowan Old Style",Palatino,Georgia,serif;
+    font-size:30px;letter-spacing:.06em;color:var(--brass-soft);
+  }
+  .card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .brand{
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    color:var(--steel);
+  }
+  .card h3{
+    margin:0;font-size:15.5px;line-height:1.4;font-weight:600;color:var(--text);
+  }
+  .card a.listen{
+    margin-top:auto;padding-top:10px;
+    font-size:13.5px;font-weight:600;color:var(--steel);text-decoration:none;
+  }
+  .card a.listen:hover{color:var(--brass)}
+  .card a.listen::after{content:" \2192"}
+  .pending{
+    margin-top:auto;padding-top:10px;font-size:12.5px;color:var(--muted);font-style:italic;
+  }
+
+  /* ---------- PRESS LIST ---------- */
+  .press{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .press li{
+    display:flex;gap:22px;align-items:baseline;
+    padding:16px 4px;border-bottom:1px solid var(--line);
+  }
+  .press .pbrand{
+    flex:0 0 150px;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+    color:var(--steel);
+  }
+  .press .phead{flex:1;font-size:15.5px;line-height:1.45;font-weight:500;color:var(--text);margin:0}
+  .press a.read{
+    flex:0 0 auto;font-size:13.5px;font-weight:600;color:var(--steel);text-decoration:none;
+    white-space:nowrap;
+  }
+  .press a.read:hover{color:var(--brass)}
+  .press a.read::after{content:" \2192"}
+  .press .pslot{flex:0 0 auto;font-size:12px;color:var(--muted);font-style:italic;white-space:nowrap}
+  @media (max-width:620px){
+    .press li{flex-direction:column;gap:4px}
+    .press .pbrand{flex:none}
+  }
+
+  /* ---------- CTA ---------- */
+  .cta{
+    margin:52px 48px 0;
+    background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);
+    color:#EDEAE2;padding:38px 40px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:24px;justify-content:space-between;
+  }
+  .cta h2{
+    margin:0;font-family:"Iowan Old Style",Palatino,Georgia,serif;
+    font-size:clamp(21px,3vw,26px);font-weight:600;color:#F5F2EA;max-width:22ch;
+    line-height:1.3;text-wrap:balance;
+  }
+  .cta .sub{margin:6px 0 0;font-size:14px;color:#AEB8C2;max-width:44ch}
+  .contact{display:flex;flex-direction:column;gap:6px;font-size:15px}
+  .contact a{color:var(--brass-soft);text-decoration:none;font-weight:600}
+  .contact a:hover{color:#E7CE93}
+  .contact .slot{color:#8E99A5;font-size:13.5px;font-style:italic}
+
+  a:focus-visible,.watch:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  @media (max-width:620px){
+    .hero{padding:44px 26px 38px}
+    section{padding:38px 26px 0}
+    .cta{margin:44px 26px 0;padding:30px 26px}
+  }
+  @media print{
+    .hero,.cta,.thumb{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>

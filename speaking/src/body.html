@@ -1,0 +1,278 @@
+<style>
+  /* ---------- SPEAKER KIT ADDITIONS ---------- */
+  .facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin:26px 0 0;padding:0;list-style:none;font-size:13.5px;color:#B9C2CC}
+  .facts b{color:#E4E0D5;font-weight:600}
+  .lead168{font-size:17px;max-width:62ch;margin:0;color:var(--text)}
+  .lead168 b{font-weight:600}
+  .featured{position:relative;display:block;aspect-ratio:16/9;background:var(--ink);overflow:hidden;border:1px solid var(--line)}
+  .featured img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88}
+  .featured .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .featured .play span{width:74px;height:74px;border-radius:50%;background:rgba(18,32,47,.82);border:2px solid var(--brass-soft);display:flex;align-items:center;justify-content:center}
+  .featured .play span::after{content:"";border-left:22px solid #F0EBDF;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .featured iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vcap{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+  .talks{display:grid;gap:18px}
+  .talk{background:var(--card);border:1px solid var(--line);padding:26px 28px}
+  .talk .tno{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--steel);margin:0 0 6px}
+  .talk h3{margin:0 0 4px;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:clamp(21px,2.8vw,25px);line-height:1.25;font-weight:600;color:var(--text)}
+  .talk .sub{margin:0 0 14px;color:var(--muted);font-size:15px;font-style:italic}
+  .talk p{margin:0 0 12px;font-size:15.5px;max-width:66ch}
+  .talk ul{margin:4px 0 14px;padding-left:20px;font-size:15px}
+  .talk li{margin:3px 0}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .meta span{font-size:12.5px;border:1px solid var(--line);padding:3px 10px;color:var(--muted)}
+  .more{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .more li{background:var(--card);border:1px solid var(--line);padding:16px 18px;font-size:14.5px}
+  .more li b{display:block;font-size:15.5px;margin-bottom:4px;color:var(--text)}
+  .testis{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .testis li{background:var(--card);border:1px solid var(--line);padding:20px 22px;display:flex;flex-direction:column}
+  .testis q{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:16.5px;line-height:1.5;quotes:"\201C" "\201D"}
+  .testis q::before,.testis q::after{color:var(--brass)}
+  .testis .who{margin-top:12px;font-size:13.5px;color:var(--muted)}
+  .testis .who b{display:block;color:var(--text);font-size:14.5px;font-weight:600}
+  .stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .stages h3{margin:0 0 10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+  .stages ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .stages li{padding:9px 2px;border-bottom:1px solid var(--line);font-size:15px}
+  .bio{background:var(--card);border:1px solid var(--line);padding:20px 22px;margin-bottom:14px}
+  .bio-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}
+  .bio-head span{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--steel)}
+  .copy{font:inherit;font-size:12.5px;font-weight:600;color:var(--steel);background:none;border:1px solid var(--line);padding:4px 12px;cursor:pointer}
+  .copy:hover{color:var(--brass);border-color:var(--brass)}
+  .bio p{margin:0;font-size:15.5px}
+  .bio p + p{margin-top:10px}
+  .logistics{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .logistics li{display:flex;gap:22px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:15px}
+  .logistics b{flex:0 0 150px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+  @media (max-width:620px){.logistics li{flex-direction:column;gap:2px}.logistics b{flex:none}}
+  .dl{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--steel);text-decoration:none;border-bottom:1px solid var(--steel)}
+  .dl:hover{color:var(--brass);border-color:var(--brass)}
+</style>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="kicker">Speaker Kit</p>
+    <h1>Glenn Cohen</h1>
+    <p class="roles">
+      Former <b>Mossad Chief Operational Psychologist</b> · <b>Hostage negotiator</b> ·
+      Keynote speaker on resilience, leadership &amp; performance under pressure
+    </p>
+    <p class="tagline">&ldquo;We are far stronger than we think, and even the darkest trauma can become growth, not just survival.&rdquo;</p>
+    <ul class="facts">
+      <li><b>Keynotes</b> in English &amp; Hebrew</li>
+      <li><b>Live</b> worldwide · <b>Virtual</b></li>
+      <li><b>Born and raised</b> in New York</li>
+    </ul>
+    <figure class="hero-photo" style="margin-left:0;margin-right:0">
+      <img src="https://static.wixstatic.com/media/874d13_6fad6ba9c4c34e3cb044be762b00f872~mv2.png"
+           alt="Glenn Cohen on the AIPAC main stage" onerror="this.parentElement.remove()">
+      <span class="cap">Glenn Cohen on the AIPAC main stage</span>
+    </figure>
+  </header>
+
+  <!-- 168 -->
+  <section>
+    <h2 class="label">Why Audiences Remember Glenn</h2>
+    <p class="lead168">
+      <b>Every one of the 168 hostages who came home from Gaza was received by Glenn Cohen and his team.</b>
+      Glenn heard all of their stories and distilled them into practical psychological tools for resilience
+      and growth. His audiences don&rsquo;t leave with another news story. They leave with a new way to
+      understand pressure, crisis, and how people grow through it.
+    </p>
+  </section>
+
+  <!-- VIDEO -->
+  <section>
+    <h2 class="label">See Glenn on Stage</h2>
+    <!-- SHOWREEL: replace data-yt with the Manchester showreel ID when it is ready -->
+    <a class="featured" href="https://www.youtube.com/watch?v=vFgGWZvrRWY" data-yt="vFgGWZvrRWY" target="_self">
+      <img src="https://i.ytimg.com/vi/vFgGWZvrRWY/maxresdefault.jpg" alt="Glenn Cohen on stage at AIPAC 2026"
+           onerror="this.src='https://i.ytimg.com/vi/vFgGWZvrRWY/hqdefault.jpg'">
+      <span class="play"><span></span></span>
+    </a>
+    <p class="vcap">AIPAC 2026 main stage: leadership and resilience in challenging times</p>
+    <a class="watch" href="#more-video" target="_self">More talks and interviews</a>
+  </section>
+
+  <!-- KEYNOTES -->
+  <section>
+    <h2 class="label">Keynotes</h2>
+    <div class="talks">
+
+      <article class="talk">
+        <p class="tno">Keynote 01</p>
+        <h3>From Captivity to Resilience</h3>
+        <p class="sub">Behind the scenes with the Hostage Debrief Team Leader</p>
+        <p>
+          After October&nbsp;7th, Glenn served more than five months of emergency reserve duty in the
+          IDF Hostage Negotiation Unit. He was the first mental health professional to meet the hostages
+          on their return, wrote the protocol for receiving them, and founded and led the team that
+          debriefed all 168 returned hostages.
+        </p>
+        <p>
+          Glenn shares what they endured, and the coping strategies that carried them through: small wins,
+          finding control where there seems to be none, togetherness, and meaning. He takes the audience
+          behind the scenes as a Mossad psychologist, hostage negotiator and POW-survival trainer, and
+          turns these lessons into tools anyone can use in their own crisis.
+        </p>
+        <ul>
+          <li>Why some people break and others grow under extreme pressure</li>
+          <li>Small wins: regaining control when almost nothing is in your control</li>
+          <li>Why togetherness is our oxygen, in captivity and in teams</li>
+        </ul>
+        <div class="meta"><span>45&ndash;60 min + Q&amp;A</span><span>Keynote or fireside chat</span><span>Corporate &amp; community</span></div>
+      </article>
+
+      <article class="talk">
+        <p class="tno">Keynote 02</p>
+        <h3>Crack the ELITE Code of Peak Performance and Resilience</h3>
+        <p class="sub">What leaders can learn from how elite operatives are selected, prepared and debriefed</p>
+        <p>
+          The ELITE Method is a leadership framework Glenn developed over decades in the Mossad, the
+          elite units and high-stakes psychological operations. At its heart is the E&nbsp;Factor:
+          the emotional engine that drives trust, resilience, courage, adaptability and execution under pressure.
+        </p>
+        <p>
+          Glenn reveals how elite performers are trained to think creatively in uncertainty, lead through
+          complexity, and approach the toughest challenges believing there is no such thing as
+          &ldquo;mission impossible.&rdquo; Leaders and teams leave with practical tools to perform in
+          the moments that matter most.
+        </p>
+        <ul>
+          <li>The five ELITE keys: Execution, Learning, Integrity, Toughness, Emotion</li>
+          <li>Debrief culture: how elite teams learn faster than everyone else</li>
+          <li>Performing under uncertainty without burning out</li>
+        </ul>
+        <div class="meta"><span>45&ndash;90 min</span><span>Keynote or interactive workshop</span><span>Leadership teams &amp; conferences</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MORE TALKS -->
+  <section>
+    <h2 class="label">Also Available</h2>
+    <ul class="more">
+      <li><b>Knights Without Armor</b>From &ldquo;Iceman&rdquo; pilot to clinical psychologist: the strength people find when they take off the armor.</li>
+      <li><b>Eating Ironmen for Breakfast</b>He didn&rsquo;t run until 40, then finished Ironman races and led a team across a 500&nbsp;km race in Africa. How limiting beliefs hold us back.</li>
+      <li><b>Breaking Free</b>Lessons from preparing pilots and elite fighters for captivity, and from those who came home: escaping the inner captivity of fear and limiting stories.</li>
+    </ul>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <h2 class="label">What Organizers Say</h2>
+    <ul class="testis">
+      <li><q>I&rsquo;ve been in this field for several decades, and I must admit that your presentation was the most impactful we&rsquo;ve heard.</q>
+        <span class="who"><b>Steven Shulman</b>President &amp; CEO, United Israel Appeal Canada</span></li>
+      <li><q>Glenn truly changed my way of thinking about the hostage situation and, more fundamentally, about Israeli society.</q>
+        <span class="who"><b>Michael Oren</b>Former Ambassador to the United States · New York Times bestselling author</span></li>
+      <li><q>The audience was riveted for a full 90 minutes.</q>
+        <span class="who"><b>Adi Ron</b>HR Director, Dot Compliance (translated from Hebrew)</span></li>
+      <li><q>It was fascinating to see how, in such a short time, Glenn connected with us and touched each one of us.</q>
+        <span class="who"><b>Avivit Shpizaizen</b>Bank Leumi (translated from Hebrew)</span></li>
+      <li><q>I was not surprised to hear in the summary that he was the best speaker that we heard on our four-day solidarity mission.</q>
+        <span class="who"><b>Ross Singer</b>Mission leader and guide</span></li>
+      <li><q>Your warmth, honesty, content &amp; messaging were all spot on!</q>
+        <span class="who"><b>Rabbi Yehuda Kantor</b>Westport Chabad</span></li>
+    </ul>
+  </section>
+
+  <!-- STAGES -->
+  <section>
+    <h2 class="label">Selected Stages &amp; Clients</h2>
+    <div class="stages">
+      <div>
+        <h3>Corporate</h3>
+        <ul>
+          <li>Microsoft</li><li>Amazon</li><li>Check Point</li><li>Windward</li><li>Innoviz</li>
+          <li>Bank Leumi</li><li>Clal Insurance</li><li>Caldwell, partner conference</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Conferences &amp; Communities</h3>
+        <ul>
+          <li>AIPAC main stage, 2025 &amp; 2026</li><li>UJA-Federation of New York</li>
+          <li>UJIA Trailblazers, Manchester</li><li>United Israel Appeal Canada</li>
+          <li>JNF Canada</li><li>Israeli American Council national conference</li>
+          <li>Private briefings to the President and the Prime Minister</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE VIDEO -->
+  <section id="more-video">
+    <h2 class="label">Talks &amp; Interviews</h2>
+    <ul class="cards">
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:22px">AIPAC&nbsp;’25</span><img src="https://i.ytimg.com/vi/D5tRvjBVIbg/hqdefault.jpg" alt="Glenn Cohen at AIPAC 2025" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">AIPAC 2025</span><h3>A conversation with Glenn Cohen, introduced by Dan Senor</h3><a class="listen" href="https://www.youtube.com/watch?v=D5tRvjBVIbg">Watch</a></div>
+      </li>
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:22px">BBC&nbsp;NEWS</span><img src="https://i.ytimg.com/vi/IOL8UY6t4L8/hqdefault.jpg" alt="Glenn Cohen on BBC News" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">BBC News</span><h3>Supporting the returning hostages</h3><a class="listen" href="https://www.youtube.com/watch?v=IOL8UY6t4L8">Watch</a></div>
+      </li>
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:19px">CALL&nbsp;ME&nbsp;BACK</span><img src="https://i.ytimg.com/vi/D-k-5O5xLNE/hqdefault.jpg" alt="Call Me Back with Dan Senor" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">Call Me Back · Dan Senor</span><h3>What we know about captivity in Gaza</h3><a class="listen" href="https://www.youtube.com/watch?v=D-k-5O5xLNE">Watch</a></div>
+      </li>
+    </ul>
+    <a class="watch" href="https://oritac123-jpg.github.io/glenn-media-kit/">Full media kit</a>
+  </section>
+
+  <!-- BIOS -->
+  <section>
+    <h2 class="label">Bios to Copy</h2>
+    <div class="bio">
+      <div class="bio-head"><span>One line</span><button class="copy" type="button">Copy</button></div>
+      <p>Glenn Cohen is a former Mossad Chief Operational Psychologist and hostage negotiator who led the team that debriefed the 168 hostages returned from Gaza.</p>
+    </div>
+    <div class="bio">
+      <div class="bio-head"><span>Short · 50 words</span><button class="copy" type="button">Copy</button></div>
+      <p>Glenn Cohen is a former Mossad Chief Operational Psychologist and hostage negotiator. For 30 years he selected, prepared and debriefed elite operatives. After October&nbsp;7th he founded and led the team that debriefed the 168 returned hostages. Today he speaks worldwide on resilience, leadership and performance under pressure.</p>
+    </div>
+    <div class="bio">
+      <div class="bio-head"><span>Full · 150 words</span><button class="copy" type="button">Copy</button></div>
+      <p>Glenn Cohen is a former Mossad Chief Operational Psychologist and hostage negotiator. Born and raised in New York, he served as an Air Force pilot before spending three decades selecting, preparing and debriefing elite operatives, retiring from the Mossad with the equivalent rank of colonel.</p>
+      <p>After October&nbsp;7th he served more than five months of emergency reserve duty in the IDF Hostage Negotiation Unit. He was the first mental health professional to meet the hostages on their return, wrote the protocol for receiving them, and founded and led the team that debriefed all 168 returned hostages. He has briefed the President and the Prime Minister on the lessons of captivity.</p>
+      <p>Glenn developed the ELITE Method for peak performance and resilience, and speaks to corporations, leadership teams and communities worldwide. Simon &amp; Schuster has acquired his upcoming book on post-traumatic growth.</p>
+    </div>
+  </section>
+
+  <!-- LOGISTICS -->
+  <section>
+    <h2 class="label">Booking Details</h2>
+    <ul class="logistics">
+      <li><b>Formats</b><span>Keynote · fireside chat · interactive ELITE workshop · virtual keynote</span></li>
+      <li><b>Length</b><span>45&ndash;60 minutes plus Q&amp;A, or half-day workshop</span></li>
+      <li><b>Languages</b><span>English · Hebrew</span></li>
+      <li><b>Travel</b><span>Regularly in North America and the UK</span></li>
+      <li><b>Tech</b><span>Projector and screen, lapel or handheld microphone</span></li>
+      <li><b>Photos</b><span>High-resolution photos available on request</span></li>
+    </ul>
+    <a class="dl" href="https://static.wixstatic.com/media/874d13_6fad6ba9c4c34e3cb044be762b00f872~mv2.png">Download stage photo</a>
+  </section>
+
+  {{CTA}}
+
+</div>
+
+<script>
+  /* copy buttons */
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=[].map.call(b.closest('.bio').querySelectorAll('p'),function(p){return p.innerText}).join('\n\n');
+      try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)})}
+      catch(e){b.textContent='Select and copy'}
+    });
+  });
+  /* click-to-play featured video */
+  var f=document.querySelector('.featured');
+  if(f){f.addEventListener('click',function(e){
+    e.preventDefault();
+    f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+f.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="Glenn Cohen on stage"></iframe>';
+  });}
+</script>
