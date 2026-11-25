@@ -308,6 +308,27 @@
   @media (max-width:620px){.logistics li{flex-direction:column;gap:2px}.logistics b{flex:none}}
   .dl{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--steel);text-decoration:none;border-bottom:1px solid var(--steel)}
   .dl:hover{color:var(--brass);border-color:var(--brass)}
+  .kns{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .kn{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+  .vthumb{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(150deg,var(--ink),var(--ink-2))}
+  .vthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .vthumb:hover img{transform:scale(1.04)}
+  .vthumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vplay{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:rgba(18,32,47,.78);border:2px solid var(--brass-soft)}
+  .vplay::after{content:"";position:absolute;left:24px;top:18px;border-left:19px solid #F0EBDF;border-top:12px solid transparent;border-bottom:12px solid transparent}
+  .kn-body{padding:18px 22px 20px}
+  .kn-body h3{margin:4px 0 8px;font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:23px;line-height:1.25;color:var(--text)}
+  .kn-body > p{margin:0;font-size:16px}
+  details{margin-top:10px}
+  summary{cursor:pointer;color:var(--steel);font-weight:600;font-size:14px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:" \2193"}
+  details[open] summary::after{content:" \2191"}
+  details p{font-size:15px;margin:10px 0}
+  .vgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:16px}
+  .vgrid li{background:var(--card);border:1px solid var(--line)}
+  .vcap2{display:block;padding:12px 14px;font-size:13.5px;color:var(--muted)}
+  .vcap2 b{display:block;color:var(--text);font-size:14.5px}
 </style>
 
 <div class="page">
@@ -357,31 +378,43 @@
   <!-- KEYNOTES -->
   <section>
     <h2 class="label">Keynotes</h2>
-    <div class="talks">
-
-      <article class="talk">
-        <p class="tno">Keynote 01</p>
-        <h3>From Captivity to Resilience</h3>
-        <p class="sub">Behind the scenes with the Hostage Debrief Team Leader</p>
-        <p>What the hostages endured, and the coping strategies that carried them through: small wins, control, togetherness and meaning. Lessons anyone can use in their own crisis.</p>
-        <div class="meta"><span>45&ndash;60 min + Q&amp;A</span><span>Keynote or fireside chat</span><span>Corporate &amp; community</span></div>
+    <div class="kns">
+      <article class="kn">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=mEKKXULIgpE" data-yt="mEKKXULIgpE" target="_self">
+          <img src="https://i.ytimg.com/vi/mEKKXULIgpE/hqdefault.jpg" alt="From Captivity to Resilience" loading="lazy" onerror="this.style.display='none'">
+          <span class="vplay"></span>
+        </a>
+        <div class="kn-body">
+          <span class="brand">Keynote 01</span>
+          <h3>From Captivity to Resilience</h3>
+          <p>What 168 returned hostages teach us about surviving, and growing, under extreme pressure.</p>
+          <details><summary>Read more</summary><p>Glenn was the first mental health professional to meet the hostages on their return, wrote the protocol for receiving them, and led the team that debriefed all 168. He shares the coping strategies that carried them through: small wins, finding control, togetherness and meaning, and turns them into tools anyone can use in their own crisis.</p><div class="meta"><span>45&ndash;60 min + Q&amp;A</span><span>Keynote or fireside chat</span></div></details>
+        </div>
       </article>
-
-      <article class="talk">
-        <p class="tno">Keynote 02</p>
-        <h3>Crack the ELITE Code of Peak Performance and Resilience</h3>
-        <p class="sub">How elite units select, prepare and debrief, and what leaders can use the next morning</p>
-        <p>The ELITE Method: Execution, Learning, Integrity, Toughness and Emotion. Practical tools for teams that need to perform under pressure and uncertainty.</p>
-        <div class="meta"><span>45&ndash;90 min</span><span>Keynote or interactive workshop</span><span>Leadership teams &amp; conferences</span></div>
+      <article class="kn">
+        <a class="vthumb" href="https://www.youtube.com/watch?v=gpkzmJ6oyvo" data-yt="gpkzmJ6oyvo" target="_self">
+          <img src="https://i.ytimg.com/vi/gpkzmJ6oyvo/hqdefault.jpg" alt="Crack the ELITE Code" loading="lazy" onerror="this.style.display='none'">
+          <span class="vplay"></span>
+        </a>
+        <div class="kn-body">
+          <span class="brand">Keynote 02</span>
+          <h3>Crack the ELITE Code</h3>
+          <p>How elite units select, prepare and debrief, and what your leaders can use the next morning.</p>
+          <details><summary>Read more</summary><p>The ELITE Method (Execution, Learning, Integrity, Toughness, Emotion) was developed over decades in the Mossad and the elite units. At its heart is the E Factor, the emotional engine of trust, courage and execution under pressure. Teams leave with practical tools to perform when it matters most.</p><div class="meta"><span>45&ndash;90 min</span><span>Keynote or workshop</span></div></details>
+        </div>
       </article>
-
     </div>
   </section>
 
-  <!-- MORE TALKS -->
-  <section>
-    <h2 class="label">Also Available</h2>
-    <p class="prose">Knights Without Armor · Eating Ironmen for Breakfast · Breaking Free</p>
+  <!-- MORE VIDEO -->
+  <section id="more-video">
+    <h2 class="label">More of Glenn on Stage</h2>
+    <ul class="vgrid">
+      <li><a class="vthumb" href="https://www.youtube.com/watch?v=vFgGWZvrRWY" data-yt="vFgGWZvrRWY" target="_self"><img src="https://i.ytimg.com/vi/vFgGWZvrRWY/hqdefault.jpg" alt="AIPAC 2026" loading="lazy" onerror="this.style.display='none'"><span class="vplay"></span></a><span class="vcap2"><b>AIPAC 2026</b>Leadership and resilience in challenging times</span></li>
+      <li><a class="vthumb" href="https://www.youtube.com/watch?v=YX4tKTa-Hko" data-yt="YX4tKTa-Hko" target="_self"><img src="https://i.ytimg.com/vi/YX4tKTa-Hko/hqdefault.jpg" alt="Toronto keynote" loading="lazy" onerror="this.style.display='none'"><span class="vplay"></span></a><span class="vcap2"><b>Toronto keynote</b>What the hostages endured and how they coped</span></li>
+      <li><a class="vthumb" href="https://www.youtube.com/watch?v=UmapXyPhkds" data-yt="UmapXyPhkds" target="_self"><img src="https://i.ytimg.com/vi/UmapXyPhkds/hqdefault.jpg" alt="Resilience under pressure" loading="lazy" onerror="this.style.display='none'"><span class="vplay"></span></a><span class="vcap2"><b>Resilience under pressure</b>Full talk</span></li>
+      <li><a class="vthumb" href="https://www.youtube.com/watch?v=IOL8UY6t4L8" data-yt="IOL8UY6t4L8" target="_self"><img src="https://i.ytimg.com/vi/IOL8UY6t4L8/hqdefault.jpg" alt="BBC News interview" loading="lazy" onerror="this.style.display='none'"><span class="vplay"></span></a><span class="vcap2"><b>BBC News</b>Supporting the returning hostages</span></li>
+    </ul>
   </section>
 
   <!-- TESTIMONIALS -->
@@ -422,29 +455,6 @@
     </div>
   </section>
 
-  <!-- MORE VIDEO -->
-  <section id="more-video">
-    <h2 class="label">More Talks</h2>
-    <ul class="cards">
-      <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:22px">AIPAC&nbsp;’26</span><img src="https://i.ytimg.com/vi/vFgGWZvrRWY/hqdefault.jpg" alt="Glenn Cohen at AIPAC 2026" onerror="this.remove()"></div>
-        <div class="card-body"><span class="brand">AIPAC 2026</span><h3>Leadership and resilience in challenging times</h3><a class="listen" href="https://www.youtube.com/watch?v=vFgGWZvrRWY">Watch</a></div>
-      </li>
-      <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:22px">UJA</span><img src="https://i.ytimg.com/vi/mEKKXULIgpE/hqdefault.jpg" alt="Glenn Cohen keynote at UJA-Federation of New York" onerror="this.remove()"></div>
-        <div class="card-body"><span class="brand">UJA-Federation of New York</span><h3>Keynote: From Captivity to Resilience</h3><a class="listen" href="https://www.youtube.com/watch?v=mEKKXULIgpE">Watch</a></div>
-      </li>
-      <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:20px">TORONTO</span><img src="https://i.ytimg.com/vi/YX4tKTa-Hko/hqdefault.jpg" alt="Glenn Cohen keynote in Toronto" onerror="this.remove()"></div>
-        <div class="card-body"><span class="brand">Toronto keynote</span><h3>Hostage Debrief Team Leader: what they endured and how they coped</h3><a class="listen" href="https://www.youtube.com/watch?v=YX4tKTa-Hko">Watch</a></div>
-      </li>
-      <li class="card">
-        <div class="thumb"><span class="mono" style="font-size:22px">BBC&nbsp;NEWS</span><img src="https://i.ytimg.com/vi/IOL8UY6t4L8/hqdefault.jpg" alt="Glenn Cohen on BBC News" onerror="this.remove()"></div>
-        <div class="card-body"><span class="brand">BBC News</span><h3>Supporting the returning hostages</h3><a class="listen" href="https://www.youtube.com/watch?v=IOL8UY6t4L8">Watch</a></div>
-      </li>
-    </ul>
-    <a class="watch" href="https://oritac123-jpg.github.io/glenn-media-kit/">Full media kit</a>
-  </section>
 
   <!-- BIOS -->
   <section>
@@ -494,6 +504,7 @@
     });
   });
   /* click-to-play featured video */
+  document.querySelectorAll('a.vthumb[data-yt]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();a.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';});});
   var f=document.querySelector('a.featured[data-yt]');
   if(f){f.addEventListener('click',function(e){
     e.preventDefault();
