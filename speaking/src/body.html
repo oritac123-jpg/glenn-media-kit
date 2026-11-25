@@ -9,6 +9,7 @@
   .featured .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
   .featured .play span{width:74px;height:74px;border-radius:50%;background:rgba(18,32,47,.82);border:2px solid var(--brass-soft);display:flex;align-items:center;justify-content:center}
   .featured .play span::after{content:"";border-left:22px solid #F0EBDF;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .featured video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
   .featured iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .vcap{font-size:13.5px;color:var(--muted);margin:10px 0 0}
   .talks{display:grid;gap:18px}
@@ -86,13 +87,13 @@
   <!-- VIDEO -->
   <section>
     <h2 class="label">See Glenn on Stage</h2>
-    <!-- SHOWREEL: replace data-yt with the Manchester showreel ID when it is ready -->
-    <a class="featured" href="https://www.youtube.com/watch?v=vFgGWZvrRWY" data-yt="vFgGWZvrRWY" target="_self">
-      <img src="https://i.ytimg.com/vi/vFgGWZvrRWY/maxresdefault.jpg" alt="Glenn Cohen on stage at AIPAC 2026"
-           onerror="this.src='https://i.ytimg.com/vi/vFgGWZvrRWY/hqdefault.jpg'">
-      <span class="play"><span></span></span>
-    </a>
-    <p class="vcap">AIPAC 2026 main stage: leadership and resilience in challenging times</p>
+    <!-- SHOWREEL: speaker reel (1:27), hosted on glenn-cohen.com -->
+    <div class="featured reel">
+      <video controls preload="metadata" playsinline
+             poster="https://static.wixstatic.com/media/874d13_6fad6ba9c4c34e3cb044be762b00f872~mv2.png"
+             src="https://video.wixstatic.com/video/eb1f21_86717d7e7d5841278b0cad156067de7b/1080p/mp4/file.mp4"></video>
+    </div>
+    <p class="vcap">Speaker reel: AIPAC, UJA-Federation of New York and more (1:27)</p>
     <a class="watch" href="#more-video" target="_self">More talks and interviews</a>
   </section>
 
@@ -206,6 +207,18 @@
     <h2 class="label">Talks &amp; Interviews</h2>
     <ul class="cards">
       <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:22px">AIPAC&nbsp;’26</span><img src="https://i.ytimg.com/vi/vFgGWZvrRWY/hqdefault.jpg" alt="Glenn Cohen at AIPAC 2026" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">AIPAC 2026</span><h3>Leadership and resilience in challenging times</h3><a class="listen" href="https://www.youtube.com/watch?v=vFgGWZvrRWY">Watch</a></div>
+      </li>
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:22px">UJA</span><img src="https://i.ytimg.com/vi/mEKKXULIgpE/hqdefault.jpg" alt="Glenn Cohen keynote at UJA-Federation of New York" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">UJA-Federation of New York</span><h3>Keynote: From Captivity to Resilience</h3><a class="listen" href="https://www.youtube.com/watch?v=mEKKXULIgpE">Watch</a></div>
+      </li>
+      <li class="card">
+        <div class="thumb"><span class="mono" style="font-size:20px">TORONTO</span><img src="https://i.ytimg.com/vi/YX4tKTa-Hko/hqdefault.jpg" alt="Glenn Cohen keynote in Toronto" onerror="this.remove()"></div>
+        <div class="card-body"><span class="brand">Toronto keynote</span><h3>Hostage Debrief Team Leader: what they endured and how they coped</h3><a class="listen" href="https://www.youtube.com/watch?v=YX4tKTa-Hko">Watch</a></div>
+      </li>
+      <li class="card">
         <div class="thumb"><span class="mono" style="font-size:22px">AIPAC&nbsp;’25</span><img src="https://i.ytimg.com/vi/D5tRvjBVIbg/hqdefault.jpg" alt="Glenn Cohen at AIPAC 2025" onerror="this.remove()"></div>
         <div class="card-body"><span class="brand">AIPAC 2025</span><h3>A conversation with Glenn Cohen, introduced by Dan Senor</h3><a class="listen" href="https://www.youtube.com/watch?v=D5tRvjBVIbg">Watch</a></div>
       </li>
@@ -268,7 +281,7 @@
     });
   });
   /* click-to-play featured video */
-  var f=document.querySelector('.featured');
+  var f=document.querySelector('a.featured[data-yt]');
   if(f){f.addEventListener('click',function(e){
     e.preventDefault();
     f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+f.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="Glenn Cohen on stage"></iframe>';
